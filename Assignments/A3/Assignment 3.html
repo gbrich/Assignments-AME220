@@ -14,6 +14,32 @@ $(document).ready(function(){
 });
 </script>
 <style>
+
+
+
+.accordion {
+  background-color: maroon;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: MidnightBlue;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
 /* unvisited link */
 a:link {
   color: red;
@@ -92,26 +118,52 @@ th, td {
 
 
 <p></p>
-<h2>OBJECTIVE</h2>
-<h3>To record, mix and master brilliant works of art.</h3>
-<h2>EXPERIENCE</>
-  <h3>Joey Leyva-Audio Engineer
-Interned with Mr. Leyva back in 2013. Successfully assisted him with mastering various productions like a cover of Killing Me Softly.
-
-<p></p>
-Scottsdale Community College 2013-present
-Worked on multiple songs weekly. Mixed and mastered songs like Bohemian Rhapsody and Liztomania.</h3>
-<h2>EDUCATION</h2>
-
-<h3>Arizona State University- Tempe, Arizona - DIGITAL CULTURE Jan 2018-Present
-  <p></p>
-  Scottsdale Community College- Scottsdale, Arizona- MUSIC BUSINESS,  2017</h3>
-
-  <h2>SKILLS</h2>
-
-  <h3> Pro Tools, Max MSP, X Code , Unity, Abelton, and more. </h3>
+<button class="accordion">OBJECTIVE</button>
+<div class="panel">
+  <p>To create brilliant works of art.</p>
+</div>
+<button class="accordion">EXPERIENCE</button>
+<div class="panel">
+  <p>  Joey Leyva-Audio Engineer
+  Interned with Mr. Leyva back in 2013. Successfully assisted him with mastering various productions like a cover of Killing Me Softly.</p>
+</div>
 
 
+<button class="accordion">EDUCATION</button>
+<div class="panel">
+
+<p> Scottsdale Community College 2013-present
+Worked on multiple songs weekly. Mixed and mastered songs like Bohemian Rhapsody and Liztomania.</p>
+
+
+<p>Arizona State University- Tempe, Arizona - DIGITAL CULTURE Jan 2018-Present</p>
+
+  <p> Scottsdale Community College- Scottsdale, Arizona- MUSIC BUSINESS,  2017</p>
+</div>
+
+  <button class="accordion">SKILLS</button>
+
+<div class="panel">
+
+  <p> Pro Tools, Max MSP, X Code , Unity, Abelton, and more. </p>
+</div>
+
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
 
 
       </body>
