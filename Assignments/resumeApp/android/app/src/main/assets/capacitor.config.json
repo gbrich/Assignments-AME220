@@ -1,7 +1,0 @@
-{
-  "appId": "com.me",
-  "appName": "Resume",
-  "bundledWebRuntime": true,
-  "npmClient": "npm",
-  "webDir": "www"
-}

@@ -1,7 +1,0 @@
-{
-  "appId": "com.company.clock",
-  "appName": "Clock",
-  "bundledWebRuntime": true,
-  "npmClient": "npm",
-  "webDir": "www"
-}
